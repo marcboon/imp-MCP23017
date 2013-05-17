@@ -1,5 +1,6 @@
 class MCP23008
 {
+    I2C_ADDR = 0x20
     REG_ADDR =
     {
         IODIR = 0x00
