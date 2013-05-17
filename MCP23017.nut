@@ -2,8 +2,6 @@ class MCP23017
 {
     REG_ADDR = 
     {
-    
-        // MCP23017 port A
         A = {
             IODIR = 0x00
             IOPOL = 0x02
@@ -17,8 +15,6 @@ class MCP23017
             GPIO = 0x12
             OLAT = 0x14
         }
-
-        // MCP23017 port B
         B = {
             IODIR = 0x01
             IOPOL = 0x03
@@ -32,19 +28,6 @@ class MCP23017
             GPIO = 0x13
             OLAT = 0x15
         }
-        
-        // MCP23008
-        IODIR = 0x00
-        IOPOL = 0x01
-        GPINTEN = 0x02
-        DEFVAL = 0x03
-        INTCON = 0x04
-        IOCON = 0x05
-        GPPU = 0x06
-        INTF = 0x07
-        INTCAP = 0x08
-        GPIO = 0x09
-        OLAT = 0x0A
     }
     i2cPort = null;
     i2cAddress = null;
