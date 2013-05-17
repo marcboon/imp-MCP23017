@@ -1,5 +1,6 @@
 class MCP23017
 {
+    I2C_ADDR = 0x20
     REG_ADDR = 
     {
         A = {
