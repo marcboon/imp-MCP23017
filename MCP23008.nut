@@ -39,11 +39,6 @@ class MCP23008
         i2cAddress = address << 1;
     }
     
-    // Return register mapping
-    function getRegister(code) {
-        return REG_ADDR[code]
-    }
-    
     // Read a byte
     function read(reg)
     {
@@ -72,13 +67,11 @@ class MCP23008
     }
     
     function setValueForRegister(gpio, reg, value) {
-        local reg = getRegister(reg)
-        writeBit(reg, gpio&7, value);
+        writeBit(REG_ADDR[reg], gpio&7, value);
     }
     
     function getValueForRegister(gpio, reg) {
-        local reg = getRegister(reg)
-        return (read(reg)&(1<<(gpio&7)))?1:0;
+        return (read(REG_ADDR[reg])&(1<<(gpio&7)))?1:0;
     }
     
     // Set a GPIO direction
